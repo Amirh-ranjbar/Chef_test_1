@@ -44,6 +44,7 @@ public class PizzaMaterialsFragment extends Fragment {
 
         pizzaDough = (ImageView) view.findViewById(R.id.pizzaMaterialFragment_dough);
 //        keilbasa = (ImageView) view.findViewById(R.id.keilbasa);
+
         sausage = (ImageView) view.findViewById(R.id.sausage);
         meet = (ImageView) view.findViewById(R.id.meet);
 
