@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark_gray"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_marginRight="@dimen/right_margin_20dp">
+
+        <ImageView
+            android:id="@+id/pizzaLevel1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/pizza_1" />
+
+        <ImageView
+            android:id="@+id/pizzaLevel2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/pizza_2" />
+
+        <ImageView
+            android:id="@+id/pizzaLevel3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/pizza_3" />
+
+        <ImageView
+            android:id="@+id/pizzaLevel4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/pizza_4" />
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/arrow_back" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/nextButton"
+        android:layout_gravity="center|bottom"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/arrow_next"
+        android:visibility="invisible"/>
+
+    <FrameLayout
+        android:id="@+id/pizza_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/left_margin_20dp">
+
+
+    </FrameLayout>
+
+</FrameLayout>

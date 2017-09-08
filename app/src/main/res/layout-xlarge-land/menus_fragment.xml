@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark_gray"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/padding_64dp">
+
+        <ImageView
+            android:layout_width="500dp"
+            android:layout_height="500dp"
+            app:srcCompat="@drawable/ready_menu"
+            android:id="@+id/ready_menu_imageview"/>
+
+
+        <ImageView
+            android:layout_width="500dp"
+            android:layout_height="500dp"
+            app:srcCompat="@drawable/create_food"
+            android:id="@+id/create_food_imageview"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/padding_64dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/fried_chicken_menu"
+                android:id="@+id/fried_chicken_imageview"
+                android:layout_marginRight="@dimen/right_margin_48dp"
+                android:layout_marginLeft="@dimen/left_margin_48dp"
+                android:visibility="invisible"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/sandwich_menu"
+                android:id="@+id/sandwich_imageview"
+                android:layout_marginRight="@dimen/right_margin_48dp"
+                android:layout_marginLeft="@dimen/left_margin_48dp"
+                android:visibility="invisible"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pizza_menu"
+                android:id="@+id/pizza_imageview"
+                android:layout_marginLeft="@dimen/left_margin_48dp"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/salad_menu"
+                android:id="@+id/salad_imageview"
+                android:layout_marginLeft="@dimen/left_margin_48dp"
+                android:layout_marginRight="@dimen/right_margin_48dp"
+                android:visibility="invisible"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/other_menu"
+                android:id="@+id/other_imageview"
+                android:layout_marginLeft="@dimen/left_margin_48dp"
+                android:layout_marginRight="@dimen/right_margin_48dp"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

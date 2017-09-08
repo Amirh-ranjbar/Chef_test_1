@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/home/amirh/Documents/AndroidStudioProjects/Chef_test_1/gestureimageview/src/main/assets"/><source path="/home/amirh/Documents/AndroidStudioProjects/Chef_test_1/gestureimageview/build/generated/assets/shaders/debug"/></dataSet><dataSet config="debug"><source path="/home/amirh/Documents/AndroidStudioProjects/Chef_test_1/gestureimageview/src/debug/assets"/></dataSet></merger>

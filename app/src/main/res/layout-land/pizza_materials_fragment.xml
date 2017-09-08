@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark_gray">
+
+    <ImageView
+        android:id="@+id/pizzaMaterialFragment_dough"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/dough_thin" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/keilbasaRecyclerView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/keilbasa"/>
+
+    <ImageView
+        android:id="@+id/sausage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/sausage"/>
+
+    <ImageView
+        android:id="@+id/meet"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/meet"/>
+</LinearLayout>
