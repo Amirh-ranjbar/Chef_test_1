@@ -1,6 +1,7 @@
 package ranjbar.amirh.chef_test_1;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -11,6 +12,15 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.github.magiepooh.recycleritemdecoration.ItemDecorations;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import jp.satorufujiwara.binder.recycler.RecyclerBinder;
+import jp.satorufujiwara.binder.recycler.RecyclerBinderAdapter;
+import ranjbar.amirh.chef_test_1.RecyclerViewRelateds.DemoSectionType;
+import ranjbar.amirh.chef_test_1.RecyclerViewRelateds.DemoViewType;
+import ranjbar.amirh.chef_test_1.RecyclerViewRelateds.PageBinder;
 
 import static android.content.ContentValues.TAG;
 
@@ -48,11 +58,17 @@ public class PizzaMaterialsFragment extends Fragment {
         sausage = (ImageView) view.findViewById(R.id.sausage);
         meet = (ImageView) view.findViewById(R.id.meet);
 
-        RecyclerView.ItemDecoration decoration = ItemDecorations.vertical(getContext()).create();
+        RecyclerView.ItemDecoration decoration = ItemDecorations.horizontal(getContext())
+//                .first(R.drawable.shape_seprator_dark_grey)
+                .type(DemoViewType.PAGE.ordinal() , R.drawable.shape_seprator_dark_grey)
+//                .last(R.drawable.shape_seprator_dark_grey)
+                .create();
 
         keilbasaRecyclerView = (RecyclerView) view.findViewById(R.id.keilbasaRecyclerView);
         keilbasaRecyclerView.setLayoutManager(
                 new LinearLayoutManager(getContext() , LinearLayoutManager.HORIZONTAL , false));
+        RecyclerBinderAdapter<DemoSectionType, DemoViewType> Adapter = initAdapter();
+        keilbasaRecyclerView.setAdapter(Adapter);
         keilbasaRecyclerView.addItemDecoration(decoration);
 
         setImageViewsPosition();
@@ -78,6 +94,19 @@ public class PizzaMaterialsFragment extends Fragment {
         Log.d(TAG, "PizzaMaterialsFragment pizza dough , height :  " + pizzaDough.getLayoutParams().height);
         Log.d(TAG, "PizzaMaterialsFragment pizza dough , width :  " + pizzaDough.getLayoutParams().width);
 
+    }
+
+    @NonNull
+    private RecyclerBinderAdapter<DemoSectionType, DemoViewType> initAdapter() {
+        RecyclerBinderAdapter<DemoSectionType, DemoViewType> adapter = new RecyclerBinderAdapter<>();
+        List<RecyclerBinder<DemoViewType>> demoBinderList = new ArrayList<>();
+        demoBinderList.add(new PageBinder(getActivity() , R.drawable.keilbasa));
+        demoBinderList.add(new PageBinder(getActivity() , R.drawable.sausage));
+        demoBinderList.add(new PageBinder(getActivity() , R.drawable.meet));
+        for (RecyclerBinder<DemoViewType> binder : demoBinderList) {
+            adapter.add(DemoSectionType.ITEM, binder);
+        }
+        return adapter;
     }
 
 }
