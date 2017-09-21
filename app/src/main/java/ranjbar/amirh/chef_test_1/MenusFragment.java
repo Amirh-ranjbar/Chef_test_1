@@ -17,6 +17,7 @@ import static android.content.ContentValues.TAG;
 
 public class MenusFragment extends Fragment {
 
+    PizzaFragment pizzaFragment;
     private ImageView ready_menu;
     private ImageView create_food_menu;
     private ImageView pizzaImageView;
@@ -24,33 +25,6 @@ public class MenusFragment extends Fragment {
     private ImageView saladImageView;
     private ImageView friedChickenImageView;
     private ImageView otherImageView;
-
-    PizzaFragment pizzaFragment;
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-        View view = inflater.inflate(R.layout.menus_fragment, container , false);
-
-        ready_menu = (ImageView) view.findViewById(R.id.ready_menu_imageview);
-        create_food_menu = (ImageView) view.findViewById(R.id.create_food_imageview);
-        pizzaImageView = (ImageView) view.findViewById(R.id.pizza_imageview);
-        sandwichImageView = (ImageView) view.findViewById(R.id.sandwich_imageview);
-        saladImageView = (ImageView) view.findViewById(R.id.salad_imageview);
-        friedChickenImageView = (ImageView) view.findViewById(R.id.fried_chicken_imageview);
-        otherImageView = (ImageView) view.findViewById(R.id.other_imageview);
-
-        ready_menu.setOnClickListener(clickListener);
-        create_food_menu.setOnClickListener(clickListener);
-        pizzaImageView.setOnClickListener(clickListener);
-        sandwichImageView.setOnClickListener(clickListener);
-        saladImageView.setOnClickListener(clickListener);
-        friedChickenImageView.setOnClickListener(clickListener);
-        otherImageView.setOnClickListener(clickListener);
-
-        return view;
-    }
-
     View.OnClickListener clickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
@@ -86,4 +60,29 @@ public class MenusFragment extends Fragment {
             }
         }
     };
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        View view = inflater.inflate(R.layout.menus_fragment, container, false);
+
+
+        ready_menu = (ImageView) view.findViewById(R.id.ready_menu_imageview);
+        create_food_menu = (ImageView) view.findViewById(R.id.create_food_imageview);
+        pizzaImageView = (ImageView) view.findViewById(R.id.pizza_imageview);
+        sandwichImageView = (ImageView) view.findViewById(R.id.sandwich_imageview);
+        saladImageView = (ImageView) view.findViewById(R.id.salad_imageview);
+        friedChickenImageView = (ImageView) view.findViewById(R.id.fried_chicken_imageview);
+        otherImageView = (ImageView) view.findViewById(R.id.other_imageview);
+
+        ready_menu.setOnClickListener(clickListener);
+        create_food_menu.setOnClickListener(clickListener);
+        pizzaImageView.setOnClickListener(clickListener);
+        sandwichImageView.setOnClickListener(clickListener);
+        saladImageView.setOnClickListener(clickListener);
+        friedChickenImageView.setOnClickListener(clickListener);
+        otherImageView.setOnClickListener(clickListener);
+
+        return view;
+    }
 }
